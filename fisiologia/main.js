@@ -27,13 +27,20 @@ const totalizador = {
             inputTarget.classList.add(`${classNameDosOperandos}`);
             let operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
             let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaleixoxoutput}`);
-            celulaDeSaida.value = this.somar(operandos); 
-        }     
+            celulaDeSaida.value = this.somar(operandos);  
+        }
         if(inputTarget.dataset.totaleixoy) {
             let classNameDosOperandos = inputTarget.dataset.totaleixoy;
             inputTarget.classList.add(`${classNameDosOperandos}`);
             let operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
             let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totaleixoyoutput}`);
+            celulaDeSaida.value = this.somar(operandos);  
+        }
+        if(inputTarget.dataset.totalgeral) {
+            let classNameDosOperandos = inputTarget.dataset.totalgeral;
+            inputTarget.classList.add(`${classNameDosOperandos}`);
+            let operandos = document.querySelectorAll(`.${classNameDosOperandos}`);
+            let celulaDeSaida = document.querySelector(`.${inputTarget.dataset.totalgeraloutput}`);
             celulaDeSaida.value = this.somar(operandos);  
         }
     },
@@ -46,7 +53,7 @@ const totalizador = {
     },
 }
 function escutarEventos() {
-    const inputsCelulares = document.querySelectorAll("[data-totaleixox], [data-totaleixoy]");
+    const inputsCelulares = document.querySelectorAll("[data-totaleixox], [data-totaleixoy], [data-totalgeral]");
     inputsCelulares.forEach( inputCelular => {
         inputCelular.addEventListener("input", () => totalizador.filtrarEtotalizarCelulas(inputCelular));
         inputCelular.value !== "" && totalizador.filtrarEtotalizarCelulas(inputCelular);

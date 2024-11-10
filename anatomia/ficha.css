@@ -1,12 +1,12 @@
 ﻿.ficha {
     width: var(--layout-width);
-    margin: 30px auto 14px;
+    margin: 30px auto;
     color: var(--fullblack);
     font-size: 14px;
 }
 @media print {
     .ficha {
-        margin-top: 0;
+        margin-top: 20px;
         margin-bottom: 0;
     }
 }
@@ -104,7 +104,7 @@
 .seccao-1__header__col-2 {
     grid-area: col-2;
     display: grid;
-    grid-template-rows: 14px 100px;
+    grid-template-rows: 17px 100px;
     background-color: var(--gray--c);
 }
 .seccao-2__header__linha-com-numeros-das-colunas,
@@ -169,6 +169,7 @@
 .ficha__seccao--obs {
     margin: 8px 0;
     padding-left: 4px;
+    min-height: 74px;
 }
 .ficha__input-obs {
     width: 890px;
@@ -202,11 +203,20 @@
 .ficha__rodape__campo-de-categoria {
     width: 225px;
 }
-
+/* CLASSES REUTILIZÁVEIS */
+.celula-nao-aplicavel {
+    background-color: var(--gray--a);
+}
+.--cor-de-fundo-padrao {
+    background-color: var(--gray--c);
+}
+.--cor-de-fundo-padrao--discreta {
+    background-color: var(--gray--light);
+}
 [data-totaleixox]:focus,
-[data-totaleixoy]:focus,
+.ficha__seccao--2 input:focus,
 .input-nao-celular:focus,
-.input-celular--focus:focus {
+.ficha__input-obs:focus {
     border-bottom: 2px solid var(--blue);
     background-color: var(--greenyellow);
     color: var(--cor-de-texto);
@@ -221,38 +231,5 @@
     color: var(--yt)
 }
 .input--font-small {
-    font-size: 12px
-}
-.ficha__rodape {
-    padding: 0 4px;
-    min-height: 71px;
-    display: grid;
-    grid-template-columns: 680px 1fr;
-    align-items: center;
-}
-.ficha__rodape__col-de-nome {
-    min-height: 22px;
-}
-.ficha__rodape__campo-de-nome,
-.ficha__rodape__col-de-categoria {
-    min-height: 18px;
-}
-.ficha__rodape input {
-    font-size: 12px;
-}
-.ficha__rodape__campo-de-nome {
-    width: 420px;
-}
-.ficha__rodape__campo-de-categoria {
-    width: 196px;
-}
-/* CLASSES REUTILIZÁVEIS */
-.celula-nao-aplicavel {
-    background-color: var(--gray--a);
-}
-.--cor-de-fundo-padrao {
-    background-color: var(--gray--c);
-}
-.--cor-de-fundo-padrao--discreta {
-    background-color: var(--gray--light);
+    font-size: 13.5px
 }
