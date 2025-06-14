@@ -1,7 +1,7 @@
 ﻿.ficha {
     width: var(--layout-width);
     margin: 30px auto;
-    color: var(--fullblack);
+    color: var(--black);
     font-size: 14px;
 }
 @media print {
@@ -77,7 +77,7 @@
 .ficha__header__col-de-titulo {
     grid-column: 1/4;
     padding: 5px 0;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
 }
 .ficha__titulo {
@@ -90,7 +90,7 @@
     text-align: center;
     padding: 8px 0;
     text-transform: uppercase;
-    background-color: var(--fullblack);
+    background-color: var(--black);
     color: var(--yt);
 }
 .ficha__seccao__titulo--margin-top {
@@ -105,7 +105,7 @@
     grid-area: col-2;
     display: grid;
     grid-template-rows: 17px 100px;
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 .seccao-2__header__linha-com-numeros-das-colunas,
 .seccao-1__header__linha-de-indicadores {
@@ -131,7 +131,7 @@
 @media screen and (min-width: 1024px) {
     .seccao-1__header__linha-de-indicadores > div:hover span {
         transform: rotate(0deg) scale(1.2);
-        box-shadow: 0 0 15px var(--gray--d);
+        box-shadow: 0 0 15px var(--gray-d);
         border-radius: 5px;
         background-color: var(--yt);
         padding: 5px;
@@ -205,13 +205,13 @@
 }
 /* CLASSES REUTILIZÁVEIS */
 .celula-nao-aplicavel {
-    background-color: var(--gray--a);
+    background-color: var(--gray-a);
 }
 .--cor-de-fundo-padrao {
-    background-color: var(--gray--c);
+    background-color: var(--gray-c);
 }
 .--cor-de-fundo-padrao--discreta {
-    background-color: var(--gray--light);
+    background-color: var(--gray-light);
 }
 [data-totaleixox]:focus,
 .ficha__seccao--2 input:focus,
