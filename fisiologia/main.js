@@ -16,8 +16,6 @@ const backup = {
             inputTarget.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-${inputTarget.id}`, inputTarget.value));
             inputTarget.value = localStorage.getItem(`${keyPrefix}-${inputTarget.id}`);
         });
-        /*campoDeObs.addEventListener("input", () => localStorage.setItem(`${keyPrefix}-input-obs`, campoDeObs.textContent));
-        campoDeObs.textContent = localStorage.getItem(`${keyPrefix}-input-obs`);*/
     }
 }
 const totalizador = {
